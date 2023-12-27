@@ -6,8 +6,6 @@
             <div class="title m-b-md justify-center">
                 Pizza - {{$id}}
             </div>
-
-
         </div>
     </div>
 @endsection

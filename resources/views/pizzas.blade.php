@@ -35,20 +35,24 @@
     {{--                </p>--}}
     {{--            @endfor--}}
 
-            <p>{{$name}}</p>
-            <p>{{$age}}</p>
 
-            @foreach($pizzas as $pizza)
-                <div>
-                    {{$loop->index}} - {{$pizza['type']}} - {{$pizza['base']}}
-                    @if($loop->first)
-                        <span> - first in the loop</span>
-                    @endif
-                    @if($loop->last)
-                        <span> - last in the loop</span>
-                    @endif
-                </div>
-            @endforeach
+
+{{--            @foreach($pizzas as $pizza)--}}
+{{--                <div>--}}
+{{--                    {{$loop->index}} - {{$pizza['type']}} - {{$pizza['base']}}--}}
+{{--                    @if($loop->first)--}}
+{{--                        <span> - first in the loop</span>--}}
+{{--                    @endif--}}
+{{--                    @if($loop->last)--}}
+{{--                        <span> - last in the loop</span>--}}
+{{--                    @endif--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
+                @foreach($pizzas as $pizza)
+                    <div>
+                        {{$pizza->name}} - {{$pizza->type}} - {{$pizza->base}}
+                    </div>
+                @endforeach
         </div>
     </div>
 @endsection
