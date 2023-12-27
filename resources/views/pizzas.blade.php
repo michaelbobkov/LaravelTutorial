@@ -74,6 +74,24 @@
             <p>
                 {{$type}} - {{$base}} - {{$price}}
             </p>
+
+            @if($price > 15)
+                <p>This pizza is expensive</p>
+            @elseif($price < 5)
+                <p>This pizza is cheap</p>
+
+            @endif
+
+
+            @unless($base == 'cheesy crust')
+                <p>You don't have a cheesy crust</p>
+            @endunless
+
+            @php
+                $name = 'Michael';
+                echo($name)
+            @endphp
+
         </div>
     </div>
 </body>
