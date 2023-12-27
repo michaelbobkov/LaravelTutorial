@@ -29,7 +29,16 @@ Route::get('/pizzas', function () {
         ['type' => 'vegetarian', 'base' => 'thin'],
     ];
 
-    return view('pizzas', ['pizzas' => $pizzas]);
+    return view('pizzas', [
+        'pizzas' => $pizzas,
+        'name' => request('name'),
+        'age' => request('age')
+    ]);
 //    return 'pizzas!';
 //    return ['name' => 'veg pizzas', 'base' => 'classic'];
 });
+
+Route::get('/pizzas/{id}', function ($id) {
+    return view('details', ['id'=>$id]);
+});
+
