@@ -3,10 +3,12 @@
 @section('content')
     <div class="flex-center position-ref full-height">
         <div class="content">
-            <div class="title m-b-md justify-center">
-                Pizza - {{$id}}
-            </div>
+            <h1>Order for {{ $pizza->name }}</h1>
+            <p class="type">Type - {{$pizza->type}}</p>
+            <p class="base">Base - {{$pizza->base}}</p>
+
         </div>
+
     </div>
 @endsection
 
