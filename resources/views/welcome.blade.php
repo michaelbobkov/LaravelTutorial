@@ -21,6 +21,8 @@
             <div class="title m-b-md">
                 The best Pizza!!!
             </div>
+            <a href="/pizzas/create">Create new pizza order</a>
+
         </div>
 
     </div>
