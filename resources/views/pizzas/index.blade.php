@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div class="flex-center position-ref full-height">
+    <div class="flex-center position-ref full-height wrapper">
         <div class="content">
             <div class="title m-b-md justify-center">
                 Pizza List
@@ -29,11 +29,11 @@
 {{--            @for($i =0; $i < 5; $i++)--}}
 {{--                <p>The value of i is {{$i}}</p>--}}
 {{--            @endfor--}}
-    {{--            @for($i = 0; $i < count($pizzas); $i++)--}}
-    {{--                <p>--}}
-    {{--                    {{$pizzas[$i]['type']}}--}}
-    {{--                </p>--}}
-    {{--            @endfor--}}
+{{--            @for($i = 0; $i < count($pizzas); $i++)--}}
+{{--                <p>--}}
+{{--                    {{$pizzas[$i]['type']}}--}}
+{{--                </p>--}}
+{{--            @endfor--}}
 
 
 
@@ -48,11 +48,12 @@
 {{--                    @endif--}}
 {{--                </div>--}}
 {{--            @endforeach--}}
-                @foreach($pizzas as $pizza)
-                    <div>
-                        {{$pizza->name}} - {{$pizza->type}} - {{$pizza->base}}
-                    </div>
-                @endforeach
+            @foreach($pizzas as $pizza)
+                <div>
+                    <img src="/img/img_1.png" style="width: 30px; height: 30px">
+                    <h4><a href="/pizzas/{{$pizza->id}}">{{$pizza->name}}</a></h4>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection
